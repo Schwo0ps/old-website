@@ -1,9 +1,8 @@
 import * as React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Container } from "@mui/material";
 import Header from "./Header";
 import Map from "./Map";
-// import Timeline from "./Timeline";
+import Timeline from "./Timeline";
 // import Contact from "./Contact";
 // import Footer from "./Footer";
 
@@ -14,8 +13,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <Map />
-      {/* <Timeline />
-      <Contact />
+      <Timeline />
+      {/* <Contact />
       <Footer /> */}
     </ThemeProvider>
   );

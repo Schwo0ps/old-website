@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import * as React from "react";
 
 class Map extends React.Component {
@@ -10,6 +10,9 @@ class Map extends React.Component {
           minHeight: '20vh',
         }}
       >
+        <Typography align='center' variant="h2" gutterBottom>
+          Map
+        </Typography>
         <img alt="" src={require("./map.png")}
           style={{
             width: '100%',
