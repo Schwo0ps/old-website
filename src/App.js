@@ -12,7 +12,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      {/* <Map /> */}
+      <hr />
+      <Map />
+      <hr />
       <Timeline />
       {/* <Contact />
       <Footer /> */}
