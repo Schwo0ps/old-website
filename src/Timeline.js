@@ -17,38 +17,44 @@ const content =
 
 function TimelinePost(props) {
   return (
-<CardActionArea href="#">
-        <Card
+    <CardActionArea href="#">
+      <Card
+        sx={{
+          width: "100%",
+          display: "flex",
+          position: "relative",
+          flexDirection: { xs: "column", sm: "row" },
+          marginBottom: 3,
+        }}
+      >
+        <CardMedia
+          component="img"
+          alt="post 1"
+          image="/post_001.jpg"
           sx={{
-            width: "100%",
-            display: "flex",
-            position: 'relative',
-            marginBottom: 3,
+            width: { xs: "100%", sm: "40%" },
           }}
-        >
-          <CardMedia
-            component="img"
-            alt="post 1"
-            image="/post_001.jpg"
+        />
+        <CardContent sx={{ width: "inherit" }}>
+          <Typography variant="h5" align="center">
+            {props.date}
+          </Typography>{" "}
+          <Typography noWrap variant="h5">
+            {props.title}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            paragraph
             sx={{
-              maxWidth: 280,
               display: { xs: "none", sm: "block" },
             }}
-          />
-          <CardContent sx={{ width: 'inherit' }}>
-            <Typography noWrap variant="h5" component="h2">
-              {props.title}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-              {props.date}
-            </Typography>
-            <Typography variant="subtitle1" paragraph>
-              {props.content}
-            </Typography>
-          </CardContent>
-        </Card>
-      </CardActionArea>
-  )
+          >
+            {props.content}
+          </Typography>
+        </CardContent>
+      </Card>
+    </CardActionArea>
+  );
 }
 
 function Timeline(props) {

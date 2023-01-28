@@ -1,36 +1,44 @@
 import * as React from "react";
-import { Container, Paper, Typography } from "@mui/material";
+import { Box, Container, Paper, Typography } from "@mui/material";
 
 function Header(props) {
   return (
-    <Paper
+    <Box
       sx={{
         position: "relative",
-        backgroundImage: "url(/header.jpg)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height: "30vh",
         width: "100%",
       }}
       square
     >
-      <Container
+      <img
+        alt=""
+        src={require("./header.jpg")}
         style={{
+          width: "100%",
+        }}
+      />
+      <Box
+        style={{
+          position: 'absolute',
+          bottom: '0%',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection: 'column',
+          flexDirection: "column",
           width: "100%",
           height: "100%",
           color: "white",
           // paddingBottom: '3vh',
         }}
       >
-        <Typography variant="h4" gutterBottom>Hypertrousers</Typography>
-        <Typography variant="subtitle" gutterBottom>Nikita Kosolobov</Typography>
-      </Container>
-    </Paper>
+        <Typography component="h1" variant="h4" gutterBottom>
+          Hypertrousers
+        </Typography>
+        <Typography variant="subtitle" gutterBottom>
+          Nikita Kosolobov
+        </Typography>
+      </Box>
+    </Box>
   );
 }
 
